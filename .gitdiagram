@@ -1,0 +1,31 @@
+# Trang chính
+node index.html
+
+# Nhóm: 2D Transformation
+group 2D {
+  node template/transform2d.html
+  node style/transform2d.css
+
+  edge index.html -> template/transform2d.html
+  edge template/transform2d.html -> style/transform2d.css
+}
+
+# Nhóm: 3D Transformation
+group 3D {
+  node template/transform3d.html
+  node style/transform3d.css
+
+  edge index.html -> template/transform3d.html
+  edge template/transform3d.html -> style/transform3d.css
+}
+
+# Style dùng chung
+node style/style.css
+edge template/transform2d.html -> style/style.css
+edge template/transform3d.html -> style/style.css
+
+# Ảnh favicon
+node image/icons8-css-ios-17-filled-16.png
+edge index.html -> image/icons8-css-ios-17-filled-16.png
+edge template/transform2d.html -> image/icons8-css-ios-17-filled-16.png
+edge template/transform3d.html -> image/icons8-css-ios-17-filled-16.png
