@@ -1,0 +1,306 @@
+/* Hộp cơ bản, áp dụng cho tất cả các phần tử */
+.box{
+    margin: 50px 50px;
+    background-color: #41e0e7;
+    width: 10rem;
+    height: 10rem;
+}
+
+
+
+/* Hộp 2 cho hiệu ứng quay */
+.box2
+{
+    transition: all 0.3s ease;
+}
+
+
+
+.box2:active
+{
+    transform: rotate(30deg);
+}
+
+
+
+.box2:hover
+{
+    transform: rotate(-30deg);
+}
+
+
+
+/* Hộp 3 cho hiệu ứng phóng to */
+.box3
+{
+    transition: all 0.3s ease;
+}
+
+
+
+.box3:hover
+{
+    transform: scale(1.5);
+}
+
+
+
+.box3:active
+{
+    transform: scale(0.67);
+}
+
+
+
+
+/* Hộp 4 cho hiệu ứng thu nhỏ */
+.box4
+{
+    transition: all 0.3s ease;
+}
+
+
+
+.box4:hover
+{
+    transform: scale(0.5);
+}
+
+
+
+.box4:active
+{
+    transform: scale(2);
+}
+
+
+
+/* Hộp 5 cho hiệu ứng Skew trục X */
+.box5
+{
+    transition: all 0.3s ease;
+}
+
+
+
+.box5:hover
+{
+    transform: skewX(30deg);
+}
+
+
+
+.box5:active
+{
+    transform: skewX(-30deg);
+}
+
+
+
+/* Hộp 6 cho hiệu ứng Skew trục Y */
+.box6
+{
+    transition: all 0.3s ease;
+}
+
+
+
+.box6:hover
+{
+    transform: skewY(30deg);
+}
+
+
+
+.box6:active
+{
+    transform: skewY(-30deg);
+}
+
+
+
+/* Hộp 7 cho hiệu ứng Skew trục X */
+.box7
+{
+    transition: all 0.3s ease;
+}
+
+
+
+.box7:hover
+{
+    transform: skew(30deg, -30deg);
+}
+
+
+
+.box7:active
+{
+    transform: skew(-30deg, 30deg);
+}
+
+
+
+/* Hộp 8 cho hiệu ứng di chuyển theo trục X */
+.box8 
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box8:active 
+{
+    transform: translateX(2rem);
+}
+
+
+
+.box8:hover 
+{
+    transform: translateX(-2rem);
+}
+
+
+
+/* Hộp 9 cho hiệu ứng di chuyển theo trục Y */
+.box9 
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box9:active 
+{
+    transform: translateY(2rem);
+}
+
+
+
+.box9:hover 
+{
+    transform: translateY(-2rem);
+}
+
+
+
+/* Hộp 10 cho hiệu ứng di chuyển theo hướng TB */
+.box10 
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box10:active 
+{
+    transform: translate(2rem, 2rem);
+}
+
+
+
+.box10:hover 
+{
+    transform: translate(-2rem, -2rem);
+}
+
+
+
+/* Hộp 11 cho hiệu ứng di chuyển theo hướng TN */
+.box11 
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box11:active 
+{
+    transform: translate(2rem, -2rem);
+}
+
+
+
+.box11:hover 
+{
+    transform: translate(-2rem, 2rem);
+}
+
+
+
+/* Hộp 12 cho hiệu ứng di chuyển theo hướng ĐN */
+.box12 
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box12:active 
+{
+    transform: translate(-2rem, -2rem);
+}
+
+
+
+.box12:hover 
+{
+    transform: translate(2rem, 2rem);
+}
+
+
+
+/* Hộp 13 cho hiệu ứng di chuyển theo hướng ĐB */
+.box13 
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box13:active 
+{
+    transform: translate(-2rem, 2rem);
+}
+
+
+
+.box13:hover 
+{
+    transform: translate(2rem, -2rem);
+}
+
+
+
+/* Hộp 14 cho hiệu ứng matrix */
+.box14 
+{
+    transition: transform 0.5s ease;
+}
+
+
+
+.box14:active 
+{
+    transform: matrix(1, -2, 1, 1, -80, 80);
+    /*
+        Biên dịch
+        scale(1, 1)
+        skew(0.3, 0.3)
+        translate(30px, 30px)
+    */
+}
+
+
+
+.box14:hover 
+{
+    transform: matrix(1, 2, -1, 1, 80, -80);
+    /*
+        Biên dịch
+        scale(1, 1)
+        skew(0.3, 0.3)
+        translate(30px, 30px)
+    */
+}

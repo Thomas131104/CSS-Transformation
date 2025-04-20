@@ -1,0 +1,160 @@
+/* Thiết lập perspective cho phần tử cha */
+article {
+    perspective: 1000px;  /* Thiết lập chiều sâu 3D */
+}
+
+
+
+/* Hộp cơ bản, áp dụng cho tất cả các phần tử */
+.box 
+{
+    margin: 50px 50px;
+    background-color: #41e0e7;
+    width: 10rem;
+    height: 10rem;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Hộp 2 cho hiệu ứng quay */
+.box2
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box2:hover
+{
+    transform: rotateZ(135deg);
+}
+
+
+
+.box2:active
+{
+    transform: rotateZ(-135deg);
+}
+
+
+
+/* Hộp 3 cho hiệu ứng dịch chuyển */
+.box3
+{
+    transition: all 0.5s ease;
+}
+
+
+
+.box3:hover
+{
+    transform: translate3d(5rem, 5rem, -5rem);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+}
+
+
+.box3:active
+{
+    transform: translate3d(-5rem, -5rem, 5rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Hộp 4 cho hiệu ứng phóng to / thu nhỏ (hơi failed) */
+.box4
+{
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.box4:hover
+{
+    transform: scale3d(1, 1, 0.5);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.box4:active
+{
+    transform: scale3d(1, 1, 2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Hộp 5 cho hiệu ứng biến dạng */
+.box5 
+{
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.box5:hover 
+{
+    transform: matrix3d(
+        1, 0.1, 0, 0,    /* Cột 1 */
+        0.1, 1, 0, 0,    /* Cột 2 */
+        0, 0, 1, 0,      /* Cột 3 */
+        0, 0, 0, 1       /* Cột 4 */
+    );
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.box5:active 
+{
+    transform: matrix3d(
+        1, -0.1, 0, 0,
+        -0.1, 1, 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 1
+    );
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Hộp 6 cho hiệu ứng biến dạng */
+.box6
+{
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.box6:hover 
+{
+    transform: matrix3d(
+        1, -0.3, 0, 0,    /* Cột 1 */
+        -0.3, 1, 0, 0,    /* Cột 2 */
+        0, 0, 1, 0,      /* Cột 3 */
+        0, 0, 0, 1       /* Cột 4 */
+    );
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.box6:active 
+{
+    transform: matrix3d(
+        1, -0.3, 0, 0,
+        0.3, 1, 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 1
+    );
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}

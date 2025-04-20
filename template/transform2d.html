@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transformation</title>
+    
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/transform2d.css">
+    <link rel="shortcut icon" href="/image/icons8-css-ios-17-filled-16.png" type="image/x-icon">
+
+    <style>
+        header, footer
+        {
+            background-color: orange;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        article
+        {
+            background-color: chocolate;
+            font-size: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        aside
+        {
+            background-color: lightgreen;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <header>2D CSS Transformer</header>
+        <aside id="side-bar">
+            <ol>
+                <a href="/index.html" class="hacker-btn">Trang chủ</a>
+                <hr>
+                <li><a href="#part1">Cơ bản</a></li>
+                <li><a href="#part2">Rotate</a></li>
+                <li><a href="#part3">Scale (Phóng to)</a></li>
+                <li><a href="#part4">Scale (Thu nhỏ)</a></li>
+                <li><a href="#part5">Skew (Trục X)</a></li>
+                <li><a href="#part6">Skew (Trục Y)</a></li>
+                <li><a href="#part7">Skew (2 Trục)</a></li>
+                <li><a href="#part8">Di chuyển theo trục X</a></li>
+                <li><a href="#part9">Di chuyển theo trục Y</a></li>
+                <li><a href="#part10">Di chuyển hướng TB</a></li>
+                <li><a href="#part11">Di chuyển hướng TN</a></li>
+                <li><a href="#part12">Di chuyển hướng ĐN</a></li>
+                <li><a href="#part13">Di chuyển hướng ĐB</a></li>
+                <li><a href="#part14">Matrix</a></li>
+                <hr>
+                <a href="transform3d.html" class="hacker-btn">3D Transformer</a>
+            </ol>
+        </aside>
+        <article class="main-transformer">
+            <ol>
+                <div class="title">
+                    <div class="title-box">Hình</div>
+                    <div class="title-code">Thuộc tính</div>
+                </div>
+
+
+                <li id="part1">Box cơ bản</li>
+                <div class="main-grid">
+                    <div class="box box1"></div>
+                    <div class="code">
+                        <pre>
+margin: 50px 50px;
+background-color: #41e0e7;
+width: 10rem;
+height: 10rem;
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+
+                <li id="part2">Rotate</li>
+                <div class="main-grid">
+                    <div class="box box2"></div>
+                    <div class="code">
+                        <pre>
+transform: rotate(30deg);                            
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                
+
+                <li id="part3">Scale (Phóng to)</li>
+                <div class="main-grid">
+                    <div class="box box3"></div>
+                    <div class="code">
+                        <pre>
+transform: scale(2);                    
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <li id="part4">Scale (Thu nhỏ)</li>
+                <div class="main-grid">
+                    <div class="box box4"></div>
+                    <div class="code">
+                        <pre>
+transform: scale(0.5);                    
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                
+
+                <li id="part5">Skew (Trục X)</li>
+                <div class="main-grid">
+                    <div class="box box5"></div>
+                    <div class="code">
+                        <pre>
+transform: skewX(30deg);                   
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <li id="part6">Skew (Trục Y)</li>
+                <div class="main-grid">
+                    <div class="box box6"></div>
+                    <div class="code">
+                        <pre>
+transform: skewY(30deg);                   
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <li id="part7">Skew (2 Trục)</li>
+                <div class="main-grid">
+                    <div class="box box7"></div>
+                    <div class="code">
+                        <pre>
+transform: skew(30deg, -30deg);                   
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                
+
+                <li id="part8">Di chuyển theo trục X</li>
+                <div class="main-grid">
+                    <div class="box box8"></div>
+                    <div class="code">
+                        <pre>
+transform: translateX(2rem);                  
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <li id="part9">Di chuyển theo trục Y</li>
+                <div class="main-grid">
+                    <div class="box box9"></div>
+                    <div class="code">
+                        <pre>
+transform: translateY(2rem);                  
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                
+
+                <li id="part10">Di chuyển theo 2 trục (Hướng TB)</li>
+                <div class="main-grid">
+                    <div class="box box10"></div>
+                    <div class="code">
+                        <pre>
+transform: translate(2rem, 2rem);          
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                
+
+                <li id="part11">Di chuyển theo 2 trục (Hướng TN)</li>
+                <div class="main-grid">
+                    <div class="box box11"></div>
+                    <div class="code">
+                        <pre>
+transform: translate(2rem, -2rem);          
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                
+
+                <li id="part12">Di chuyển theo 2 trục (Hướng ĐN)</li>
+                <div class="main-grid">
+                    <div class="box box12"></div>
+                    <div class="code">
+                        <pre>
+transform: translate(-2rem, -2rem);
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <li id="part13">Di chuyển theo 2 trục (Hướng ĐB)</li>
+                <div class="main-grid">
+                    <div class="box box13"></div>
+                    <div class="code">
+                        <pre>
+transform: translate(-2rem, 2rem);
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <li id="part14">Matrix</li>
+                <div class="main-grid">
+                    <div class="box box14"></div>
+                    <div class="code">
+                        <pre>
+transform: matrix(1, -2, 1, 1, -80, 80);
+/*
+    Biên dịch
+    scale(1, 1)
+    skew(0.3, 0.3)
+    translate(30px, 30px)
+*/
+                        </pre>
+                    </div>
+                </div>
+                
+            </ol>
+        </article>
+        <footer>&copy; by Mus</footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Phân đoạn */
+main 
+{
+    display: grid;
+    grid-template-areas: 
+        "head head head"
+        "side content content"
+        "foot foot foot";
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 250px auto auto;
+    background-color: #f0f0f0;  /* Thêm nền sáng cho main */
+}
+
+
+
+/* Các phần tử trong grid */
+header { grid-area: head; }
+aside { grid-area: side; }
+article { grid-area: content; }
+footer { grid-area: foot; }
+
+
+
+/* Các phần tử trong article */
+article ol li
+ {
+    text-align: left;
+    font-weight: 900;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Liên kết */
+a:link, a:hover, a:visited 
+{
+    color: #007bff;
+}
+
+
+
+/* Tạo grid cho hình và code */
+.title 
+{
+    display: grid;
+    grid-template-areas: "title-box title-code";
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    font-weight: 900;
+}
+
+
+
+/* Title Box */
+.title-box 
+{
+    grid-area: title-box;
+    text-align: center;
+    padding: 1rem;
+    height: 100px;
+    border: 1px solid #41e0e7;  /* Thêm màu sắc nhẹ cho border */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    font-family: 'Courier New', monospace;
+    border-radius: 8px;
+    background-color: #222;  /* Nền tối cho title-box */
+    color: #fff;  /* Màu chữ sáng */
+}
+
+
+
+/* Title Code */
+.title-code 
+{
+    grid-area: title-code;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    padding: 1rem;
+    border: 1px solid #41e0e7;
+    width: 75%;
+    background-color: #222;  /* Nền tối cho code */
+    color: #0f0;  /* Chữ xanh kiểu hacker */
+}
+
+
+
+/* Grid chính */
+.main-grid 
+{
+    display: grid;
+    grid-template-areas: "box code";
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    gap: 2rem;
+}
+
+
+
+/* Các box và code */
+.box 
+{
+    grid-area: box;
+    background-color: #41e0e7;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+/* Thêm hiệu ứng hover cho .box */
+.box:hover 
+{
+    transform: scale(1.2);
+}
+
+
+
+/* Code phần tử */
+.code 
+{
+    text-align: left;
+    background-color: #111;
+    color: #0f0;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    width: 75%;
+    padding: 2rem;
+    margin: 10px;
+    overflow: auto; /* Đảm bảo code dài sẽ có thể scroll */
+    height: 150px;  /* Cố định chiều cao */
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Thêm hiệu ứng hover cho .code */
+.code:hover 
+{
+    transform: scale(1.05);
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transformation</title>
+    
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/transform3d.css">
+    <link rel="shortcut icon" href="/image/icons8-css-ios-17-filled-16.png" type="image/x-icon">
+
+    <style>
+        body 
+        {
+            background: linear-gradient(45deg, #222, #111);
+        }
+
+
+        header, footer
+        {
+            background-color: orange;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        article
+        {
+            background-color: chocolate;
+            font-size: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        aside
+        {
+            background-color: lightgreen;
+            font-size: 20px;
+        }        
+    </style>
+</head>
+<body>
+    <main>
+        <header>3D CSS Transformer</header>
+        <aside id="side-bar">
+            <ol>
+                <a href="/index.html" class="hacker-btn">Trang chủ</a>
+                <hr>
+                <li><a href="#part1">Cơ bản</a></li>
+                <li><a href="#part2">Rotate trục Z</a></li>
+                <li><a href="#part3">Translate trục Z</a></li>
+                <li><a href="#part4">Scale trục Z</a></li>
+                <li><a href="#part5">Matrix 3D</a></li>
+                <li><a href="#part6">Hiệu ứng biến dạng</a></li>
+                <hr>
+                <a href="transform2d.html" class="hacker-btn">2D Transformer</a>
+            </ol>
+        </aside>
+
+        <article class="main-transformer">
+            <div class="scene">
+                <ol>
+                    <div class="title">
+                        <div class="title-box">Hình</div>
+                        <div class="title-code">Thuộc tính</div>
+                    </div>
+
+                    
+                    <li id="part1">Box cơ bản</li>
+                    <div class="main-grid">
+                    <div class="box box1"></div>
+                    <div class="code">
+                        <pre>
+margin: 50px 50px;
+background-color: #41e0e7;
+width: 10rem;
+height: 10rem;
+                        </pre>
+                    </div>
+                </div>
+                    <hr>
+
+
+                    <li id="part2">Rotate trục Z</li>
+                    <div class="main-grid">
+                        <div class="box box2"></div>
+                        <div class="code">
+                            <pre>
+transform: rotateZ(135deg);
+                            </pre>
+                        </div>
+                    </div>
+                    <hr>
+
+
+                    <li id="part3">Translate trục Z</li>
+                    <div class="main-grid">
+                        <div class="box box3"></div>
+                        <div class="code">
+                            <pre>
+transform: translate3d(5rem, 5rem, -5rem);
+                            </pre>
+                        </div>
+                    </div>
+                    <hr>
+
+
+                    <li id="part4">Scale trục Z</li>
+                    <div class="main-grid">
+                        <div class="box box4"></div>
+                        <div class="code">
+                            <pre>
+transform: scale3d(1, 1, 0.5);
+                            </pre>
+                        </div>
+                    </div>
+                    <hr>
+
+
+                    <li id="part5">Matrix 3D</li>
+                    <div class="main-grid">
+                        <div class="box box5"></div>
+                        <div class="code">
+                            <pre>
+transform: matrix3d(
+    1, 0.1, 0, 0,    /* Cột 1 */
+    0.1, 1, 0, 0,    /* Cột 2 */
+    0, 0, 1, 0,      /* Cột 3 */
+    0, 0, 0, 1       /* Cột 4 */
+);
+                            </pre>
+                        </div>
+                    </div>
+                    <hr>
+
+
+                    <li id="part6">Hiệu ứng biến dạng</li>
+                    <div class="main-grid">
+                        <div class="box box4"></div>
+                        <div class="code">
+                            <pre>
+transform: matrix3d(
+    1, -0.3, 0, 0,    /* Cột 1 */
+    0.3, 1, 0, 0,    /* Cột 2 */
+    0, 0, 1, 0,      /* Cột 3 */
+    0, 0, 0, 1       /* Cột 4 */
+);
+                            </pre>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+        </article>
+        <footer>&copy; by Mus</footer>
+    </main>
+</body>
+</html>
