@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transform Demo</title>
+  <link rel="shortcut icon" href="/image/icons8-css-ios-17-filled-16.png" type="image/x-icon">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body 
+    {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+
+
+    main 
+    {
+      display: grid;
+      grid-template-areas: 
+        "head"
+        "body"
+        "foot";
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+      overflow: visible;
+    }
+
+    header, footer 
+    {
+      grid-area: head;
+      background-color: #ffa500;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+
+    footer 
+    {
+      grid-area: foot;
+    }
+
+
+
+    .container 
+    {
+      grid-area: body;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+
+
+    aside, article 
+    {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .title 
+    {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #333;
+    }
+
+
+
+    .box
+    {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease;
+      margin: 0 auto;
+    }
+
+
+
+    form 
+    {
+      display: grid;
+      gap: 10px;
+    }
+
+
+
+    label 
+    {
+      font-weight: bold;
+    }
+
+
+
+    input[type="number"],
+    input[type="text"],
+    select 
+    {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+
+
+    button 
+    {
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+
+
+    button:hover 
+    {
+      background-color: #218838;
+    }
+
+
+
+    .box:hover 
+    {
+      filter: brightness(1.1);
+    }
+
+
+    .nav
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        margin: 5px;
+    }
+
+
+    .nav a:active, .nav a:hover
+    {
+        color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>Biến đổi Transform</header>
+
+    <div class="container">
+      <aside>
+        <div class="title">Hình Khối</div>
+        <div class="text">
+          <div class="box" id="box"></div>
+        </div>
+      </aside>
+
+      <article>
+        <div class="nav">
+            <a href="transform2d.html">2D</a>
+            <a href="/index.html">Main Page</a>
+            <a href="transform3d.html">3D</a>
+          </div>
+
+        <div class="title">Tùy Chỉnh</div>
+        <div class="text">
+          <form id="form">
+            <label for="width">Chiều dài:</label>
+            <input type="number" id="width" value="100" min="0" max="500" />
+
+            <label for="height">Chiều rộng:</label>
+            <input type="number" id="height" value="100" min="0" max="500" />
+
+            <label for="color">Màu sắc:</label>
+            <select id="color">
+              <option value="red">Đỏ</option>
+              <option value="orange">Cam</option>
+              <option value="yellow">Vàng</option>
+              <option value="green">Xanh lá</option>
+              <option value="blue" selected>Xanh dương</option>
+              <option value="purple">Tím</option>
+              <option value="grey">Xám</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="black">Đen</option>
+            </select>
+
+            <label for="style-customized">Transform:</label>
+            <input type="text" id="style-customized" placeholder="VD: translateX(100px)" />
+
+            <button type="submit">Áp dụng</button>
+          </form>
+
+          <div class="nav">
+            <a href="transform2d.html">2D</a>
+            <a href="/index.html">Main Page</a>
+            <a href="transform3d.html">3D</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer>&copy; By Mus</footer>
+
+    <script src="/script/main.js"></script>
+  </main>
+</body>
+</html>

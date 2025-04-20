@@ -121,12 +121,6 @@ a:link, a:hover, a:visited
 
 
 
-/* Thêm hiệu ứng hover cho .box */
-.box:hover 
-{
-    transform: scale(1.2);
-}
-
 
 
 /* Code phần tử */
@@ -147,10 +141,3 @@ a:link, a:hover, a:visited
     transition: transform 0.3s ease;
 }
 
-
-
-/* Thêm hiệu ứng hover cho .code */
-.code:hover 
-{
-    transform: scale(1.05);
-}

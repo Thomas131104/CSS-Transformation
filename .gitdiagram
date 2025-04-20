@@ -1,31 +1,21 @@
-# Trang chính
-node index.html
-
-# Nhóm: 2D Transformation
-group 2D {
-  node template/transform2d.html
-  node style/transform2d.css
-
-  edge index.html -> template/transform2d.html
-  edge template/transform2d.html -> style/transform2d.css
-}
-
-# Nhóm: 3D Transformation
-group 3D {
-  node template/transform3d.html
-  node style/transform3d.css
-
-  edge index.html -> template/transform3d.html
-  edge template/transform3d.html -> style/transform3d.css
-}
-
-# Style dùng chung
-node style/style.css
-edge template/transform2d.html -> style/style.css
-edge template/transform3d.html -> style/style.css
-
-# Ảnh favicon
-node image/icons8-css-ios-17-filled-16.png
-edge index.html -> image/icons8-css-ios-17-filled-16.png
-edge template/transform2d.html -> image/icons8-css-ios-17-filled-16.png
-edge template/transform3d.html -> image/icons8-css-ios-17-filled-16.png
+graph TD
+    A[Trang chủ (index.html)] --> B[2D Transformation (template/transform2d.html)]
+    A[Trang chủ (index.html)] --> C[3D Transformation (template/transform3d.html)]
+    A[Trang chủ (index.html)] --> D[Customize Transformation (template/transform-customization.html)]
+    
+    A --> E[style/style.css]
+    B --> F[style/transform2d.css]
+    C --> G[style/transform3d.css]
+    D --> H[style/transform-customization.css]
+    E --> A
+    F --> B
+    G --> C
+    H --> D
+    
+    B --> I[script/main.js]
+    C --> I[script/main.js]
+    D --> I[script/main.js]
+    
+    B --> J[image/icons8-css-ios-17-filled-16.png]
+    C --> J[image/icons8-css-ios-17-filled-16.png]
+    D --> J[image/icons8-css-ios-17-filled-16.png]
